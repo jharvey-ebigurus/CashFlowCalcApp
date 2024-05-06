@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculation Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <table border="1">
+        <tr>
+            <th>Period</th>
+            <th>Payment</th>
+            <th>Discount Factor</th>
+            <th>Present Value</th>
+        </tr>
+        {% for row in data.iterrows() %}
+        <tr>
+            <td>{{ row[1]['CurrentPeriod'] }}</td>
+            <td>{{ row[1]['Payment'] }}</td>
+            <td>{{ row[1]['DiscFact'] }}</td>
+            <td>{{ row[1]['PmtPV'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
